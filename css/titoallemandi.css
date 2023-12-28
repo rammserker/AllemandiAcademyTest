@@ -15,6 +15,12 @@
     box-sizing: border-box;
 }
 
+[disabled]
+{
+    pointer-events: none;
+    opacity: .4;
+}
+
 html, body
 {
     margin: 0;
@@ -393,6 +399,11 @@ section.info
         padding: .4em 1em;
         margin: .4em .4em;
         background: var(--clr-text-off);
+        
+        &:hover
+        {
+            color: #fff;
+        }
     }
 }
 
@@ -410,5 +421,6 @@ section.grafica
         background: var(--clr-text-off);
         color: var(--clr-text);
         padding: .4em 1em;
+        margin-top: 0;
     }
 }
