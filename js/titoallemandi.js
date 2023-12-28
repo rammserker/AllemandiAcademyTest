@@ -21,3 +21,8 @@ function outputUpdate (evt)
         output.innerText = input.value;
     }
 }
+
+function initFormGuard ()
+{
+    document.querySelector('form').addEventListener('submit', evt => confirm('Está por guardar la evaluación. ¿Proceder?'));
+}

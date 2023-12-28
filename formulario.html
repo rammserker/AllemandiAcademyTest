@@ -17,25 +17,21 @@
             </nav>
         </header>
         <main>
-            <form class="ficha" action="#" method="GET" autocomplete="off">
+            <form class="ficha" action="#" method="POST" autocomplete="off">
                 <h2>
                     <small>Alumno</small>
                     Luis Alberto Suárez Diaz
                 </h2>
-                <fieldset>
-                    
+                <fieldset class="datos-ficha">
                     <label>
                         clase nº
                         <input type="number" name="numero" min="1" value="1">
                     </label>
                     <label>
                         fecha
-                        <input type="date" name="fecha" max="2023-12-27" value="2023-12-27">
-                    </label>
-
-                    <label>
-                        grupal
-                        <input type="checkbox" name="grupal">
+                        <input
+                            type="date" name="fecha" autofocus
+                            max="2023-12-27" value="2023-12-27">
                     </label>
 
                     <label>
@@ -46,10 +42,14 @@
                             <option value="2">Avanzado</option>
                         </select>
                     </label>
+                    <label>
+                        grupal
+                        <input type="checkbox" name="grupal">
+                    </label>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Ficha técnica</legend>
+                <fieldset class="datos-evaluacion">
+                    <h3>Evaluación</h3>
                     
                     <input type="hidden" name="alumno" value="1">
                     <input type="hidden" name="coach" value="1">
@@ -151,7 +151,7 @@
                     </label>
                 </fieldset>
 
-                <input type="submit">
+                <input type="submit" value="Guardar">
             </form>
         </main>
 
@@ -162,6 +162,7 @@
         <script type="text/javascript" src="js/titoallemandi.js"></script>
         <script type="text/javascript">
             initFichaUpdate();
+            // initFormGuard();
         </script>
     </body>
 </html>

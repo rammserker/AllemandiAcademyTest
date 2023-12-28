@@ -27,32 +27,33 @@
                 Luis Alberto Suárez Diaz
             </h2>
             <section class="info">
-                <h3>Registros</h3>
+                <h3>Clases</h3>
                 <p>
-                    5 registros
+                    5 clases
                 </p>
-                <a href="#vermas" target="_self">Ver registros</a>
+                <a href="#vermas" target="_self">Ver clases</a>
             </section>
             <section class="info">
-                <h3>Última registro</h3>
+                <h3>Última clase</h3>
                 <p>
-                    24 dic, 2023
+                    24 diciembre, 2023
                 </p>
+                <a href="#verultima" target="_self">Ver última clase</a>
             </section>
 
             <section class="grafica">
                 <h3>Derecha</h3>
-                <div id="data_derecha"></div>
+                <div id="data_derecha" class="graph" />
             </section>
 
             <section class="grafica">
                 <h3>Revés</h3>
-                <div id="data_reves"></div>
+                <div id="data_reves" class="graph" />
             </section>
 
             <section class="grafica">
                 <h3>Globo</h3>
-                <div id="data_globo"></div>
+                <div id="data_globo" class="graph" />
             </section>
         </main>
 
@@ -69,27 +70,27 @@
                 [
                     'data_derecha',
                     [
-                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
-                        [ 'Derecha', 1, 2, 3, 3, 2, 4 ],
-                        [ 'Pared', 5, 4, 2, 2, 3, 4 ],
-                        [ 'Volea', 3, 3, 4, 4, 5, 5 ],
+                        [ 'clase', 1, 2, 3, 4, 5 ],
+                        [ 'Derecha', 1, 2, 3, 3, 2 ],
+                        [ 'Pared', 5, 4, 2, 2, 3 ],
+                        [ 'Volea', 3, 3, 4, 4, 5 ],
                     ]
                 ],
                 [
                     'data_reves',
                     [
-                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
-                        [ 'Revés', 1, 2, 3, 3, 2, 4 ],
-                        [ 'Pared', 5, 4, 2, 2, 3, 4 ],
-                        [ 'Volea', 3, 3, 4, 4, 5, 5 ],
+                        [ 'clase', 1, 2, 3, 4, 5 ],
+                        [ 'Revés', 1, 2, 3, 3, 2 ],
+                        [ 'Pared', 5, 4, 2, 2, 3 ],
+                        [ 'Volea', 3, 3, 4, 4, 5 ],
                     ]
                 ],
                 [
                     'data_globo',
                     [
-                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
-                        [ 'Sin Pared', 1, 2, 3, 3, 2, 4 ],
-                        [ 'Con Pared', 5, 4, 2, 2, 3, 4 ],
+                        [ 'clase', 1, 2, 3, 4, 5 ],
+                        [ 'Sin Pared', 1, 2, 3, 3, 2 ],
+                        [ 'Con Pared', 5, 4, 2, 2, 3 ],
                     ]
                 ],
             ];
@@ -111,6 +112,11 @@
                     axis: {
                         x: {
                             label: 'Clase'
+                        },
+                        y: {
+                            tick: {
+                                values: [ 1, 2, 3, 4, 5 ]
+                            },
                         },
                     },
                     grid: {
