@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formulario</title>
+
+        <link rel="stylesheet" href="css/titoallemandi.css">
+
+        <!-- C3 y dependencias -->
+        <link rel="stylesheet" href="css/c3.css">
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/c3.min.js"></script>
+    </head>
+    <body class="dashboard">
+        <header>
+            <h1>Tito Allemandi Pádel Academy</h1>
+
+            <nav class="users">
+                <p>luis@suarez.com</p>
+                <a href="index.html" target="_self">Salir</a>
+            </nav>
+        </header>
+        <main>
+            <h2>
+                <small>Alumno</small>
+                Luis Alberto Suárez Diaz
+            </h2>
+            <section class="info">
+                <h3>Registros</h3>
+                <p>
+                    5 registros
+                </p>
+                <a href="#vermas" target="_self">Ver registros</a>
+            </section>
+            <section class="info">
+                <h3>Última registro</h3>
+                <p>
+                    24 dic, 2023
+                </p>
+            </section>
+
+            <section class="grafica">
+                <h3>Derecha</h3>
+                <div id="data_derecha"></div>
+            </section>
+
+            <section class="grafica">
+                <h3>Revés</h3>
+                <div id="data_reves"></div>
+            </section>
+
+            <section class="grafica">
+                <h3>Globo</h3>
+                <div id="data_globo"></div>
+            </section>
+        </main>
+
+        <footer>
+            2023 All Rights Reserved - Versión de prueba
+        </footer>
+
+        <script type="text/javascript" src="js/titoallemandi.js"></script>
+        <script type="text/javascript">
+            console.log('Iniciando dashboard...');
+
+            const charts = [],
+                datas = [
+                [
+                    'data_derecha',
+                    [
+                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
+                        [ 'Derecha', 1, 2, 3, 3, 2, 4 ],
+                        [ 'Pared', 5, 4, 2, 2, 3, 4 ],
+                        [ 'Volea', 3, 3, 4, 4, 5, 5 ],
+                    ]
+                ],
+                [
+                    'data_reves',
+                    [
+                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
+                        [ 'Revés', 1, 2, 3, 3, 2, 4 ],
+                        [ 'Pared', 5, 4, 2, 2, 3, 4 ],
+                        [ 'Volea', 3, 3, 4, 4, 5, 5 ],
+                    ]
+                ],
+                [
+                    'data_globo',
+                    [
+                        [ 'clase', 1, 2, 3, 4, 5, 6 ],
+                        [ 'Sin Pared', 1, 2, 3, 3, 2, 4 ],
+                        [ 'Con Pared', 5, 4, 2, 2, 3, 4 ],
+                    ]
+                ],
+            ];
+
+            for (const data of datas)
+            {
+                const chart = c3.generate({
+                    bindto: `#${ data[ 0 ] }`,
+                    data: {
+                        x: 'clase',
+                        columns: data[ 1 ],
+                        type: 'bar'
+                    },
+                    bar: {
+                        width: {
+                            ratio: .5
+                        }
+                    },
+                    axis: {
+                        x: {
+                            label: 'Clase'
+                        },
+                    },
+                    grid: {
+                        y: {
+                            lines: [
+                                { value: 1, text: '1' },
+                                { value: 2, text: '2' },
+                                { value: 3, text: '3' },
+                                { value: 4, text: '4' },
+                                { value: 5, text: '5' },
+                            ],
+                        },
+                    },
+                });
+            }
+        </script>
+    </body>

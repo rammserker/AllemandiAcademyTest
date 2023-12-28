@@ -1,0 +1,231 @@
+:root
+{
+    --clr-primary: #0a5e03;
+    --clr-secondary: #ffcb00;
+    --clr-accent: #fff;
+    --clr-text: #f7f6f6;
+    --clr-text-off: #b28405;
+    --clr-background: #1c473a;
+}
+
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    color: var(--clr-text);
+    background: var(--clr-background) linear-gradient(var(--clr-primary), var(--clr-background) 140px) no-repeat;
+    
+    font-family: Poppins, system-ui;
+    font-size: 16px;
+    font-weight: 400;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3
+{
+    color: var(--clr-text-off);
+
+    font-family: Poppins, system-ui;
+    font-weight: 800;
+    line-height: 1em;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+h1
+{
+    content: url("../img/Logo-Tito-Allemandi-blanco.svg");
+    max-height: 130px;
+}
+
+h2
+{
+    font-size: 44px;
+    
+    & small
+    {
+        display: block;
+        color: var(--clr-text);
+        font-weight: 400;
+        font-size: 50%;
+        line-height: 1em;
+    }
+}
+
+h3
+{
+    font-size: 30px;
+}
+
+nav.ejemplos
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    
+    & a {
+        width: min(100%, 300px);
+        text-align: center;
+        text-decoration: none;
+        color: var(--clr-text);
+        font-weight: bold;
+        border: solid 1px;
+        padding: .5em;
+        
+        transition: .6s all;
+
+        &:hover,
+        &:focus
+        {
+            color: #000;
+            background: var(--clr-text-off);
+            scale: 1.1;
+        }
+    }
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 65px;
+    width: 100%;
+    padding: .5em 1em;
+    
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    background: var(--clr-background);
+    box-shadow: 0 4px 6px #0005;
+}
+
+nav.users
+{
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0 1em 0 3em;
+    
+    background: #0002;
+    
+    font-weight: bold;
+    text-transform: lowercase;
+    
+    & a
+    {
+        display: block;
+        padding: .3em 1em;
+        
+        color: #000;
+        background: var(--clr-text-off);
+        
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    & p::before
+    {
+        content: "👤";
+        display: inline-block;
+        margin: 0 .7em 0 0;
+    }
+}
+
+main
+{
+    width: min(960px, 100%);
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+footer
+{
+    height: 10vh;
+    width: 90%;
+    margin: 0 auto;
+    border-top: solid 1px #999;
+    padding: 2em;
+}
+
+/* Formulario */
+fieldset
+{
+    display: grid;
+    grid-template-columns: max-content 200px 50px;
+    gap: 1em;
+    border-color: var(--cls-text-off);
+}
+
+label
+{
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: subgrid;
+    text-transform: capitalize;
+}
+
+output
+{
+    padding: .3em 1em;
+    font-weight: bold;
+    color: var(--clr-background);
+    background: var(--clr-text);
+    text-align: center;
+    border-radius: 3px;
+}
+
+input[type="range"]
+{
+    accent-color: var(--clr-secondary);
+}
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb,
+input[type="range"]::-webkit-slider-thumb
+{
+    cursor: ew-resize;
+    background: red;
+}
+
+/* Dashboard */
+.dashboard main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    
+    & h2,
+    & .grafica
+    {
+        grid-column: span 2;
+    }
+}
+
+section
+{
+    border: solid 1px var(--clr-text-off);
+    border-radius: 6px;
+}
+
+section.grafica
+{
+    background: #0002;
+    padding: 1em;
+}

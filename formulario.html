@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formulario</title>
+
+        <link rel="stylesheet" href="css/titoallemandi.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tito Allemandi Pádel Academy</h1>
+
+            <nav class="users">
+                <p>tito@allemandi.com</p>
+                <a href="index.html" target="_self">Salir</a>
+            </nav>
+        </header>
+        <main>
+            <form class="ficha" action="#" method="GET" autocomplete="off">
+                <h2>
+                    <small>Alumno</small>
+                    Luis Alberto Suárez Diaz
+                </h2>
+                <fieldset>
+                    
+                    <label>
+                        clase nº
+                        <input type="number" name="numero" min="1" value="1">
+                    </label>
+                    <label>
+                        fecha
+                        <input type="date" name="fecha" max="2023-12-27" value="2023-12-27">
+                    </label>
+
+                    <label>
+                        grupal
+                        <input type="checkbox" name="grupal">
+                    </label>
+
+                    <label>
+                        nivel
+                        <select name="nivel">
+                            <option value="0">Básico</option>
+                            <option value="1">Intermedio</option>
+                            <option value="2">Avanzado</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ficha técnica</legend>
+                    
+                    <input type="hidden" name="alumno" value="1">
+                    <input type="hidden" name="coach" value="1">
+
+                    <label>
+                        derecha
+                        <input type="range" name="derecha" value="1" min="1" max="5">
+                        <output name="out_derecha" for="derecha">1</output>
+                    </label>
+                    <label>
+                        revés
+                        <input type="range" name="reves" value="1" min="1" max="5">
+                        <output name="out_reves" for="reves">1</output>
+                    </label>
+                    <label>
+                        derecha pared
+                        <input type="range" name="derechapared" value="1" min="1" max="5">
+                        <output name="out_derechapared" for="derechapared">1</output>
+                    </label>
+                    <label>
+                        revés pared
+                        <input type="range" name="revespared" value="1" min="1" max="5">
+                        <output name="out_revespared" for="revespared">1</output>
+                    </label>
+                    <label>
+                        globo sin pared
+                        <input type="range" name="globosinpared" value="1" min="1" max="5">
+                        <output name="out_globosinpared" for="globosinpared">1</output>
+                    </label>
+                    <label>
+                        globo con pared
+                        <input type="range" name="globoconpared" value="1" min="1" max="5">
+                        <output name="out_globoconpared" for="globoconpared">1</output>
+                    </label>
+                    <label>
+                        volea derecha
+                        <input type="range" name="voleaderecha" value="1" min="1" max="5">
+                        <output name="out_voleaderecha" for="voleaderecha">1</output>
+                    </label>
+                    <label>
+                        volea revés
+                        <input type="range" name="voleareves" value="1" min="1" max="5">
+                        <output name="out_voleareves" for="voleareves">1</output>
+                    </label>
+                    <label>
+                        bandeja
+                        <input type="range" name="bandeja" value="1" min="1" max="5">
+                        <output name="out_bandeja" for="bandeja">1</output>
+                    </label>
+                    <label>
+                        víbora
+                        <input type="range" name="vibora" value="1" min="1" max="5">
+                        <output name="out_vibora" for="vibora">1</output>
+                    </label>
+                    <label>
+                        smash
+                        <input type="range" name="smash" value="1" min="1" max="5">
+                        <output name="out_smash" for="smash">1</output>
+                    </label>
+                    <label>
+                        saque
+                        <input type="range" name="saque" value="1" min="1" max="5">
+                        <output name="out_saque" for="saque">1</output>
+                    </label>
+                    <label>
+                        empuñadura
+                        <input type="range" name="empunadura" value="1" min="1" max="5">
+                        <output name="out_empunadura" for="empunadura">1</output>
+                    </label>
+                    <label>
+                        posición pista
+                        <input type="range" name="pospista" value="1" min="1" max="5">
+                        <output name="out_pospista" for="pospista">1</output>
+                    </label>
+                    <label>
+                        control
+                        <input type="range" name="control" value="1" min="1" max="5">
+                        <output name="out_control" for="control">1</output>
+                    </label>
+                    <label>
+                        potencia
+                        <input type="range" name="potencia" value="1" min="1" max="5">
+                        <output name="out_potencia" for="potencia">1</output>
+                    </label>
+                    <label>
+                        actitud
+                        <input type="range" name="actitud" value="1" min="1" max="5">
+                        <output name="out_actitud" for="actitud">1</output>
+                    </label>
+                    <label>
+                        movilidad
+                        <input type="range" name="movilidad" value="1" min="1" max="5">
+                        <output name="out_movilidad" for="movilidad">1</output>
+                    </label>
+                    <label>
+                        técnica
+                        <input type="range" name="tecnica" value="1" min="1" max="5">
+                        <output name="out_tecnica" for="tecnica">1</output>
+                    </label>
+                </fieldset>
+
+                <input type="submit">
+            </form>
+        </main>
+
+        <footer>
+            2023 All Rights Reserved - Versión de prueba
+        </footer>
+
+        <script type="text/javascript" src="js/titoallemandi.js"></script>
+        <script type="text/javascript">
+            initFichaUpdate();
+        </script>
+    </body>
+</html>
