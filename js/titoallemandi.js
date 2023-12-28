@@ -22,6 +22,25 @@ function outputUpdate (evt)
     }
 }
 
+function initUsersActions ()
+{
+    const bots = document.querySelectorAll('.nueva-ficha');
+
+    for (const bot of bots)
+    {
+        bot.addEventListener('click', evt => nuevaFicha(evt.target.parentElement.parentElement));
+    }
+
+}
+
+function nuevaFicha (el)
+{
+    const uid = el.dataset.uid; // Id de usuario
+    console.log('Nueva ficha para usuario', uid);
+
+    window.location = 'formulario.html';
+}
+
 function initFormGuard ()
 {
     document.querySelector('form').addEventListener('submit', evt => confirm('Está por guardar la evaluación. ¿Proceder?'));

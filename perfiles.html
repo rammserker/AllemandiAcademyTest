@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alumnos</title>
+
+        <link rel="stylesheet" href="css/titoallemandi.css">
+    </head>
+    <body class="users">
+        <header>
+            <h1>Tito Allemandi Pádel Academy</h1>
+
+            <nav class="users">
+                <p>tito@allemandi.com</p>
+                <a href="index.html" target="_self">Salir</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Lista de alumnos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>E-mail</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tr>
+                        <td> <input type="search" name="nombre" id="nombre" placeholder="Filtrar nombre"> </td>
+                        <td> <input type="search" name="email" id="email" placeholder="Filtrar e-mail"> </td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-uid="1">
+                        <td>Luis Alberto Suárez Díaz</td>
+                        <td>luis@suarez.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                    <tr data-uid="2">
+                        <td>Pepe Correa</td>
+                        <td>pepe@correa.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                    <tr data-uid="3">
+                        <td>Lorena Canberra</td>
+                        <td>lorena@canberra.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                    <tr data-uid="4">
+                        <td>Mario Pergolini</td>
+                        <td>mario@pergolini.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                    <tr data-uid="5">
+                        <td>Benito Gamberro</td>
+                        <td>benito@gamberro.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                    <tr data-uid="6">
+                        <td>Marisa Tomei</td>
+                        <td>marisa@tomei.com</td>
+                        <td>
+                            <button>Ver perfil</button>
+                            <button class="nueva-ficha">Nueva ficha</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            2023 All Rights Reserved - Versión de prueba
+        </footer>
+
+        <script type="text/javascript" src="js/titoallemandi.js"></script>
+        <script type="text/javascript">
+            initUsersActions();
+        </script>
+    </body>
+</html>

@@ -466,6 +466,14 @@ section.grafica
         justify-content: center;
         gap: 4em;
     }
+
+    & td:first-of-type
+    {
+        padding: .3em 4em .3em;
+
+        font-weight: bold;
+        text-align: right;
+    }
 }
 
 th
@@ -484,14 +492,6 @@ td
     text-align: center;
 }
 
-td:first-of-type
-{
-    padding: .3em 4em .3em;
-    
-    font-weight: bold;
-    text-align: right;
-}
-
 .pagination {
     width: 100%;
     text-align: center;
@@ -503,9 +503,35 @@ td:first-of-type
     }
 }
 
-.card-fecha
+/* Usuarios */
+.users
 {
-    display: grid;
-    border: solid 1px;
+    & table
+    {
+        border: solid 1px var(--clrtext-off);
+        border-collapse: collapse;
+        
+        margin: 1.4em auto;
+        width: 100%;
+        
+        & input
+        {
+            width: 100%;
+        }
+        
+        & td:nth-of-type(3)
+        {
+                text-align: center;
+        }
+    }
     
+    & th
+    {
+    }
+        
+    & td
+    {
+        padding: .5em 2em;
+        text-align: left;
+    }
 }
