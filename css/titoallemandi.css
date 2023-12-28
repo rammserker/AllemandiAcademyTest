@@ -347,7 +347,7 @@ input[type="submit"]
     gap: 1.5em;
     
     & h2,
-    & .grafica
+    & .grafica.grande
     {
         grid-column: span 2;
     }
