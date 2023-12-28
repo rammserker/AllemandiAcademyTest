@@ -162,7 +162,7 @@
   font-size: 14px;
   padding: 2px 5px;
   text-align: left;
-  color: #FFF;
+  color: #333;
 }
 
 .c3-tooltip td {
@@ -170,6 +170,7 @@
   padding: 3px 6px;
   background-color: #fff;
   border-left: 1px dotted #999;
+  color: #333;
 }
 
 .c3-tooltip td > span {
