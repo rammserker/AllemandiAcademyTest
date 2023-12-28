@@ -165,6 +165,10 @@
   color: #333;
 }
 
+.c3-tooltip th::before {
+  content: 'Clase ';
+}
+
 .c3-tooltip td {
   font-size: 13px;
   padding: 3px 6px;

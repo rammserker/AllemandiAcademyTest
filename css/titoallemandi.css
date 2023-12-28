@@ -79,6 +79,17 @@ h3
     font-size: 27px;
 }
 
+a
+{
+    color: inherit;
+}
+
+a:hover,
+a:focus
+{
+    color: var(--clr-secondary);
+}
+
 nav.ejemplos
 {
     display: flex;
@@ -425,4 +436,76 @@ section.grafica
         padding: .4em 1em;
         margin-top: 0;
     }
+}
+
+/* Reporte */
+.reporte
+{
+    & h2
+    {
+        width: 100%;
+    }
+    
+    & dt
+    {
+        margin: 1em 0 0;
+    }
+    
+    & dd
+    {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.6em;
+        color: var(--clr-text-off);
+    }
+    
+    & main
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4em;
+    }
+}
+
+th
+{
+    font-size: 1.2em;
+    color: var(--clr-text-off);
+}
+
+tr:nth-child(even)
+{
+    background: #0003;
+}
+
+td
+{
+    text-align: center;
+}
+
+td:first-of-type
+{
+    padding: .3em 4em .3em;
+    
+    font-weight: bold;
+    text-align: right;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+    
+    & a
+    {
+        display: inline-block;
+        margin: 0 .4em;
+    }
+}
+
+.card-fecha
+{
+    display: grid;
+    border: solid 1px;
+    
 }
