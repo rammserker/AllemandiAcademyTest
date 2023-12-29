@@ -19,6 +19,8 @@
         <main>
             <h2>Lista de alumnos</h2>
             <table>
+                <col class="user-name" />
+                <col class="user-mail" />
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -26,8 +28,20 @@
                         <th>Acciones</th>
                     </tr>
                     <tr>
-                        <td> <input type="search" name="nombre" id="nombre" placeholder="Filtrar nombre"> </td>
-                        <td> <input type="search" name="email" id="email" placeholder="Filtrar e-mail"> </td>
+                        <td>
+                            <input type="search"
+                                name="nombre" id="nombre"
+                                placeholder="Filtrar nombre"
+                                autocomplete="off"
+                                data-col="1">
+                        </td>
+                        <td>
+                            <input type="search"
+                                name="email" id="email"
+                                placeholder="Filtrar e-mail"
+                                autocomplete="off"
+                                data-col="2">
+                        </td>
                         <td></td>
                     </tr>
                 </thead>
