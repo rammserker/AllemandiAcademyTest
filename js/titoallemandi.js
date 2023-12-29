@@ -37,17 +37,10 @@ function initUsersActions ()
     }
 
     // Campos de búsqueda
-    const searchrow = document.querySelector('thead tr:nth-of-type(2)'),
-        tbody = searchrow.parentElement.nextElementSibling;
+    const row = document.querySelector('thead tr:nth-of-type(2)'),
+        tbody = row.parentElement.nextElementSibling;
     
-    searchrow.addEventListener('input', evt => {
-        const search = evt.target,
-            column = search.dataset.col;
-
-        console.log('Aca ta', search, column, tbody, search.value);
-
-        filtrarPorColumna(column, tbody, search.value);
-    });
+    row.addEventListener('input', evt => filtrarTBody(row, tbody));
 }
 
 function nuevaFicha (el)
@@ -58,27 +51,44 @@ function nuevaFicha (el)
     window.location = 'formulario.html';
 }
 
-function filtrarPorColumna (col /*Int*/, tbody /* HTMLTBody */, str = "")
+function filtrarTBody (row /*Int*/, tbody /* HTMLTBody */)
 {
-    str = str.trim().toLowerCase();
+    const terms = [...row.children]
+        .map(
+            c => c.firstElementChild != null && c.firstElementChild.type == 'search' ?
+                c.firstElementChild.value.trim().toLowerCase() :
+                ''
+        ),
+        rows = [...tbody.querySelectorAll('tr')],
+        clean = terms.every(t => t.length < 2);
 
-    const tds = tbody.querySelectorAll(`td:nth-of-type(${ col })`);
+    rows.forEach(fila => {
 
-    for (const td of tds)
-    {
-        const fila = td.parentElement;
-
-        if (str.length < 2)
+        if (clean)
         {
             fila.classList.remove('hide');
         }
         else
         {
-            const txt = td.innerText.trim().toLowerCase();
-            
-            fila.classList[ txt.indexOf(str) > -1 ? 'remove' : 'add' ]('hide');
+            let stay = true;
+
+            for (let i = 0, l = terms.length; i < l; i++)
+            {
+                const str = terms[ i ];
+
+                if (str.length >= 2)
+                {
+                    const content = fila.children[ i ].innerText.trim().toLowerCase();
+
+                    console.log(str, content, content.indexOf(str), stay && content.indexOf(str) > -1);
+
+                    stay = stay && content.indexOf(str) > -1;
+                }
+            }
+
+            fila.classList[ stay ?'remove' :  'add' ]( 'hide' );
         }
-    }
+    });
 }
 
 function initFormGuard ()
