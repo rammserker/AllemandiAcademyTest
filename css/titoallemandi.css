@@ -563,3 +563,24 @@ td
         text-align: left;
     }
 }
+
+[type="search"]
+{
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000;
+    color: var(--clr-text);
+    
+    font-size: inherit;
+    
+    &:focus
+    {
+        outline: none;
+        border-color: var(--clr-text-off);
+    }
+    
+    &::placeholder
+    {
+        color: #000b;
+    }
+}
