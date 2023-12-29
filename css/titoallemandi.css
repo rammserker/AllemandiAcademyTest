@@ -554,11 +554,12 @@ td
     
     & th
     {
+        padding: .4em;
     }
         
     & td
     {
-        padding: .5em 2em;
+        padding: 1em 2em;
         text-align: left;
     }
 }
