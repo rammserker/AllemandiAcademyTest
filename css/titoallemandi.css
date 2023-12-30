@@ -584,3 +584,58 @@ td
         color: #000b;
     }
 }
+
+/* Login */
+.login form
+{
+    width: 600px;
+    max-width: 90%;
+    padding: 3em 2em;
+    margin: 2em auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px #000a;
+    background: #0001;
+}
+
+.login label
+{
+    color: #888;
+    border: none;
+    border-bottom: solid 1px #CFCFCF;
+    
+    position: relative;
+    margin-bottom: 1.4em;
+    height: 2.3em;
+    
+    &:has(> :focus)
+    {
+        border-bottom: solid 1px var(--clr-secondary);
+    }
+    
+    &:has(> :valid)
+    {
+        color: transparent;
+    }
+    
+    & input
+    {
+        color: #fff;
+        background: transparent;
+        border: none;
+        
+        font-size: 20px;
+        
+        position: absolute;
+        width: 100%;
+        
+        &:focus
+        {
+            outline: none;
+        }
+    }
+}
+
+.login [type="submit"]
+{
+    margin-top: 3em;
+}
